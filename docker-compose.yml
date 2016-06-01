@@ -1,0 +1,11 @@
+version: '2.0'
+services:
+  spark:
+    restart: always
+    image: noleto/pyspark-jupyter
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /home/ubuntu/spark_data/:/home/jovyan/work/mldata
+    ports:
+      - "80:8888"
+      - "4040:4040"
